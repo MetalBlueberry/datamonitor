@@ -1,0 +1,24 @@
+
+tests:
+  jan-data:
+    type: 
+      class: FreezeFilesystem
+      args:
+        path: out/jan-data
+        max_copies: 10
+    input:
+      class: FileInput
+      args:
+        file: tests/test.csv
+
+  feb-data:
+    type: 
+      class: FreezeFilesystem
+      args:
+        path: out/feb-data
+        max_copies: 4
+    input:
+      class: FileInput
+      args:
+        file: tests/test2.csv
+  
